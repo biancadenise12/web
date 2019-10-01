@@ -1,0 +1,18 @@
+# SSH and INSTALL DOCKER in your VM
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+sudo apt install docker.io
+
+# HOW to run the web image
+docker run -d -p 80:80 --name web geronimomark/dxcweb:1.0;
+
+# HOW to check if container is running
+docker ps -a
+
+# HOW to ssh
+docker exec -it web sh;
+> # edit the db connection
+> cd /var/www/html/
+> mv index.html backup.html # change the root file
+> vi db.php
+> # change the host, user and password of your database
+
